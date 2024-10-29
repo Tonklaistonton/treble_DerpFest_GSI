@@ -2,9 +2,10 @@
 
 echo
 echo "--------------------------------------"
-echo "        DerpFest AOSP 14.0 Build    "
+echo "        DerpFest AOSP 15.0 Build    "
 echo "                 by                   "
-echo "                KoysX               "
+echo "                Tonton                "
+echo "              Thx   KoysX                "
 echo "        Origin author: ponces  "
 echo "--------------------------------------"
 echo
@@ -17,7 +18,7 @@ BD=$PWD/treble_DerpFest_GSI/GSI
 initRepos() {
     if [ ! -d .repo ]; then
         echo "--> Initializing workspace"
-        repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14 --depth=1
+        repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 15 --depth=1
         echo
 
         echo "--> Preparing local manifest"
@@ -96,9 +97,9 @@ buildPicoVariant() {
 generatePackages() {
     echo "--> Generating packages"
     buildDate="$(date +%Y%m%d)"
-    xz -cv $BD/system-treble_arm64_bgN.img -T0 > $BD/DerpFest-arm64_bgN-14.0-unofficial-$buildDate.img.xz
-    xz -cv $BD/system-treble_arm64_bgN-mini.img -T0 > $BD/DerpFest-arm64_bgN-mini-14.0-unofficial-$buildDate.img.xz
-    xz -cv $BD/system-treble_arm64_bgN-pico.img -T0 > $BD/DerpFest-arm64_bgN-pico-14.0-unofficial-$buildDate.img.xz
+    xz -cv $BD/system-treble_arm64_bgN.img -T0 > $BD/DerpFest-arm64_bgN-15.0-unofficial-$buildDate.img.xz
+    xz -cv $BD/system-treble_arm64_bgN-mini.img -T0 > $BD/DerpFest-arm64_bgN-mini-15.0-unofficial-$buildDate.img.xz
+    xz -cv $BD/system-treble_arm64_bgN-pico.img -T0 > $BD/DerpFest-arm64_bgN-pico-15.0-unofficial-$buildDate.img.xz
     rm -rf $BD/system-*.img
     echo
 }
