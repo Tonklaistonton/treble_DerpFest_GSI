@@ -8,7 +8,7 @@ To get started with building DerpFest AOSP GSI, you'll need to get familiar with
     ```
 - Clone this repo:
     ```
-    git clone https://github.com/KoysX/treble_DerpFest_GSI.git -b 15
+    git clone https://github.com/Tonklaistonton/treble_DerpFest_GSI.git -b 15
     ```
 - Finally, start the build script:
     ```
